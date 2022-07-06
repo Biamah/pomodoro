@@ -1,26 +1,47 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <Options />
+
+    <Pomodoro :time="time" />
+
+    <TimePhase :timePhase="timePhase" />
+
+    <Settings />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import './css/global.css';
+
+import Options from './components/Options.vue';
+import Pomodoro from './components/Pomodoro.vue';
+import TimePhase from './components/TimePhase.vue';
+import Settings from './components/Settings.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Options,
+    Pomodoro,
+    TimePhase,
+    Settings
+},
+  data() {
+    return {
+      timePhase: 'start',
+      time: 20
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 </style>

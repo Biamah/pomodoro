@@ -1,0 +1,28 @@
+:root {
+    --primary-color: #79a6a3;
+    --second-color: #e7e7e7;
+    --color-text-primary: #000;
+}
+  
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    color: var(--color-text-primary);
+}
+  
+html, body {
+    background-color: var(--primary-color);
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    border: none;
+    background-color: initial;
+    cursor: pointer;
+}
